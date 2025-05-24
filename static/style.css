@@ -1,0 +1,26 @@
+body {
+            margin: 0;
+            background-color: #F7F7F7;
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            min-height: 100vh; /* Asegura que el footer esté al final de la vista si el contenido es corto */
+        }
+        header {
+            background-color: #375c94;
+            color: white;
+            padding: 0.1rem 0;
+            text-align: center;
+        }
+        main {
+            flex-grow: 1; /* Esto hace que el contenido principal ocupe el espacio restante */
+            padding: 20px;
+        }
+        footer {
+            
+            background-color: #768cee;
+            color: rgb(255, 255, 255);
+            padding: 1em 0;
+            text-align: center;
+            margin-top: auto; /* Empuja el footer hacia abajo */
+        }

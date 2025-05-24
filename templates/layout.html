@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio Web{% endblock %}</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <header>
+        <h1>Emplify</h1>
+        <nav>
+            <a href="/">Quienes somos</a> |
+            <a href="/acerca">Empleadores</a> |
+            <a href="/contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %} {# Este es el bloque donde se insertará el contenido de cada página #}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Compañía. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
