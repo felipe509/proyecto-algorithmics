@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mi Sitio Web{% endblock %}</title>
@@ -8,10 +11,13 @@
 </head>
 <body>
     <header>
-        <h1>Emplify</h1>
-        <nav>
-            <a href="/">Quienes somos</a> |
-            <a href="/acerca">Empleadores</a> |
+        <div class="tituloHeader">
+            <div style="width: 100px; padding-top: 20px;"><img height="120px" width="120px" src="static\logoempresa.png" hreft=""></div>
+            <h1 >Emplify</h1>
+        </div>
+        <nav class="enlaces">
+            <a href="/">Quienes somos</a>
+            <a href="/acerca">Empleadores</a>
             <a href="/contacto">Contacto</a>
         </nav>
     </header>

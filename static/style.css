@@ -2,15 +2,24 @@ body {
             margin: 0;
             background-color: #F7F7F7;
             display: flex;
+            font-family: "Zen Maru Gothic", sans-serif;
+            font-weight: 600;
             flex-direction: column;
             font-weight: 700;
             min-height: 100vh; /* Asegura que el footer esté al final de la vista si el contenido es corto */
         }
+        .zen-maru-gothic-regular {
+            font-family: "Zen Maru Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         header {
             background-color: #375c94;
             color: white;
             padding: 0.1rem 0;
-            text-align: center;
+            display: flex;
+            max-height: 110px;
         }
         main {
             flex-grow: 1; /* Esto hace que el contenido principal ocupe el espacio restante */
@@ -23,4 +32,23 @@ body {
             padding: 1em 0;
             text-align: center;
             margin-top: auto; /* Empuja el footer hacia abajo */
+        }
+
+        .enlaces{
+            display: flex;
+            align-items: center;
+            width: 50%;
+        }
+
+        .enlaces a{
+            width: 70%;
+            text-decoration: none;
+            color: rgb(255, 255, 255)
+        }
+
+        .tituloHeader{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
