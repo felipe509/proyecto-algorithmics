@@ -15,16 +15,21 @@ body {
         }
 
         header {
+            justify-items: center;
             background-color: #375c94;
             color: white;
-            padding: 0.1rem 0;
+            padding: 0.1rem 20px;
             display: flex;
             max-height: 110px;
+            position: relative;
+            z-index: 1001;
         }
         main {
             flex-grow: 1; /* Esto hace que el contenido principal ocupe el espacio restante */
             padding: 20px;
-        }
+            z-index: 1;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;}
         footer {
             
             background-color: #768cee;
@@ -52,3 +57,136 @@ body {
             align-items: center;
             justify-content: center;
         }
+/* <--aqui empieza el contenidov --> */
+
+/* <-- cartas --> */
+        .container-cards {
+            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat( auto-fit,  minmax(260px, 0.1fr));
+            gap:2%;
+            
+        }	
+/* <-- primera carta --> */
+        .card{
+            display: grid;
+            background: rgb(255, 255, 255);
+            padding: .4em;
+            border-radius: 8px;
+            box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+            -webkit-box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+            -moz-box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+        }
+
+        .card-image {
+        background-color: rgb(236, 236, 236);
+        width: 100%;
+        height: 130px;
+        border-radius: 6px 6px 0 0;
+        }
+        .card-body{
+            display: grid;
+            color: rgb(0, 0, 0);
+        }
+
+/* <-- fin de primera carta --> */
+/* <-- segunda carta --> */
+        .card2{
+            display: grid;
+            background: rgb(255, 255, 255);
+            padding: .4em;
+            border-radius: 8px;
+            box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+            -webkit-box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+            -moz-box-shadow: -4px 12px 12px -2px rgba(0,0,0,0.29);
+        }
+        .card-body2{
+            display: grid;
+            color: rgb(0, 0, 0);
+        }
+        .card-image2 {
+        background-color: rgb(236, 236, 236);
+        width: 100%;
+        height: 130px;
+        border-radius: 6px 6px 0 0;
+        }
+
+/* Estilos para el botón de menú hamburguesa */
+.hamburger-menu {
+    display: none; /* Por defecto, oculto en pantallas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute; /* Posicionado absolutamente dentro del header */
+    right: 20px; /* A la derecha del header */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estado activo para el menú hamburguesa (cuando se presiona) */
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0; /* Barra del medio desaparece */
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Barra superior gira y se mueve */
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Barra inferior gira y se mueve */
+}
+
+/* --- Media Query para pantallas pequeñas (móviles) --- */
+@media (max-width: 768px) { /* El menú hamburguesa aparecerá cuando la pantalla sea de 768px o menos */
+    .enlaces {
+        display: none; /* Oculta los enlaces de navegación en móviles por defecto */
+        flex-direction: column; /* Apila los enlaces cuando se muestran */
+        background-color: #375c94; /* Color de fondo para el menú desplegable */
+        position: fixed;
+        top: 100px; /* Debajo del header (ajusta este valor si tu header es más alto) */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el menú desplegado */
+        z-index: 999; /* Asegura que esté por encima del contenido principal */
+        transition: 0.3s ease-out;
+    }
+
+    .enlaces.active {
+        transform: translateX(0);
+        display: flex; /* Muestra los enlaces cuando el menú está activo (abierto) */
+    }
+
+    .enlaces a {
+        padding: 15px 0; /* Más padding para facilitar el toque en móviles */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separador entre enlaces */
+    }
+
+    .enlaces a:last-child {
+        border-bottom: none; /* Elimina el borde inferior del último enlace */
+    }
+
+    .hamburger-menu {
+        display: block; /* Muestra el botón de hamburguesa en móviles */
+    }
+
+    header {
+        justify-content: space-between; /* Asegura que el logo y el botón estén en extremos */
+    }
+
+}
+.enlace{
+    transform: translateY(100px);
+}
